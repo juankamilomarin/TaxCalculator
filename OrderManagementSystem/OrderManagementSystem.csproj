@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{975FCD5B-6670-4605-A818-F4EC6855290B}</ProjectGuid>
+    <ProjectGuid>{19396206-F24E-4AA0-B2E8-D8117FEBFAC8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TaxCalculator</RootNamespace>
-    <AssemblyName>TaxCalculator</AssemblyName>
+    <RootNamespace>OrderManagementSystem</RootNamespace>
+    <AssemblyName>OrderManagementSystem</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,8 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TaxCalculator.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TaxCalculator\TaxCalculator.csproj">
+      <Project>{975fcd5b-6670-4605-a818-f4ec6855290b}</Project>
+      <Name>TaxCalculator</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
