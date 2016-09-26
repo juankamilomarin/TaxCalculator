@@ -18,9 +18,7 @@ I made some assumptions to keep things simple:
 
 Note: there are several annotations in the form of "In real life...". This is to clarify how the model should be in a real life implementation. I made this to keep thing simple.
 
---------------------------------------
-
-<b>How to handle multiple tax calculators according to the Country?</b><br/>
+<br/><br/><b>How to handle multiple tax calculators according to the Country?</b><br/>
 In this case I used a Strategy pattern where I exposed an abstraction of the tax class (named Tax) and offered a common method: 
 ```C#
 abstract decimal CalculateTax(OrderProduct product, Customer customer)
@@ -38,9 +36,8 @@ Actually I simulated that future scenario: after I created all classes I just ha
 a new method which could be overrided by the specific Tax class that uses the date in its calculations. The rest
 of the classes didn't change.
 
---------------------------------------
 
-<b>How does the Order know which specific tax class to instance?</b><br/>
+<br/><br/><b>How does the Order know which specific tax class to instance?</b><br/>
 It does not know. In fact, it should not know cause is not part of its responsability (Sigle Responsability Principel 
 from S.O.L.I.D. - <i>A class should have only a single responsibility</i>)
 
@@ -49,7 +46,7 @@ create an instance of the proper Tax class based on the country of the customer 
 This class is created dynamically using .NET reflection. 
 This ITaxFactory is of course a private property of the Order class which is created in its constructor
 
--------------------------------------
+<br/><br/>
 Note that by using Tax abstract class and ITaxFactory interface two other S.O.L.I.D principles are fulfilled:
  * Dependency Inversion Principle (DIP) - <i>High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details should depend on abstractions.</i>
  
