@@ -43,18 +43,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Customers\BillingInformation.cs" />
+    <Compile Include="Customers\Customer.cs" />
+    <Compile Include="MainProgram.cs" />
+    <Compile Include="Orders\Order.cs" />
+    <Compile Include="Orders\ProductOrder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaxCalculator\Countries\CountryBasedTaxFactory.cs" />
+    <Compile Include="TaxCalculator\Base\ITaxFactory.cs" />
+    <Compile Include="TaxCalculator\Base\Tax.cs" />
+    <Compile Include="TaxCalculator\Countries\ColombiaTax.cs" />
+    <Compile Include="TaxCalculator\Countries\SpainTax.cs" />
+    <Compile Include="TaxCalculator\Countries\USTax.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TaxCalculator\TaxCalculator.csproj">
-      <Project>{975fcd5b-6670-4605-a818-f4ec6855290b}</Project>
-      <Name>TaxCalculator</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

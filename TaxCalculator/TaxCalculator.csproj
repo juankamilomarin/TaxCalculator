@@ -40,9 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TaxCalculator.cs" />
+    <Compile Include="Base\CountryBasedTaxFactory.cs" />
+    <Compile Include="Base\ITaxFactory.cs" />
+    <Compile Include="Base\Tax.cs" />
+    <Compile Include="Countries\ColombiaTax.cs" />
+    <Compile Include="Countries\USTax.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Countries\SpainTax.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

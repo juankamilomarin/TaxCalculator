@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TaxCalculator;
+﻿using OMS.Customers;
+using OMS.Orders;
+using System;
 
 namespace OrderManagementSystem
 {
-    class Program
+    class MainProgram
     {
 
         public static void CreateOrderAndPrintTotal(Customer customer, params OrderProduct[] products)
