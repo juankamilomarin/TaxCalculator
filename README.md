@@ -2,10 +2,6 @@
 
 Implementation of a tax calculator using design patterns and S.O.L.I.D. principles
 
-## Motivation
-
-This small project is part of a test for an architect job application in SproutLoud
-
 ## How did I solve the problem?
 
 <b>Assumptions</b><br/>
